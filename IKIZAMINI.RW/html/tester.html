@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.spacer {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+height: 100vh;;
+margin-top: 200px; 
+  background-color: #0c3eac;
+top: 200px;
+}
+.container:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: skewY(45deg);
+          transform: skewY(5.5deg);
+}
+.container:after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: skewY(4deg);
+          transform: skewY(-8deg);
+}
+p{
+    position: absolute;
+}
+
+</style>
+<body>
+        <div class="container">
+                <p>hello rigobs</p> 
+        </div>
+    <div class="spacer">
+         
+    </div>
+ 
+        
+</html>

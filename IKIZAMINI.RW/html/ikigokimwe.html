@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>Ikigo Kimwe</title>
+    <script>
+        window.onload = function () {
+        
+        //Better to construct options first and then pass it as a parameter
+        var options = {
+          animationEnabled: true,
+          title:{
+            text: "IKIGERANYO CY'AMANOTA"   
+          },
+          axisY:{
+            title:"Coal (mn tonnes)"
+          },
+          toolTip: {
+            shared: true,
+            reversed: true
+          },
+          data: [{
+            type: "stackedColumn",
+            name: "Anthracite and Bituminous",
+            showInLegend: "true",
+            yValueFormatString: "#,##0mn tonnes",
+            dataPoints: [
+              { y: 111338 , label: "USA" },
+              { y: 49088, label: "Russia" },
+              { y: 62200, label: "China" },
+              { y: 90085, label: "India" },
+              { y: 38600, label: "Australia" },
+              { y: 48750, label: "SA" }
+            ]
+          },
+          {
+            type: "stackedColumn",
+            name: "SubBituminous and Lignite",
+            showInLegend: "true",
+            yValueFormatString: "#,##0mn tonnes",
+            dataPoints: [
+              { y: 135305 , label: "USA" },
+              { y: 107922, label: "Russia" },
+              { y: 52300, label: "China" },
+              { y: 3360, label: "India" },
+              { y: 39900, label: "Australia" },
+              { y: 0, label: "SA" }
+            ]
+          }]
+        };
+        
+        $("#chartContainer").CanvasJSChart(options);
+        }
+        </script>
+</head>
+<body class="contexty">
+       <!-- navbar header -->
+    <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="container">
+                <div class="navbar-header responsive-logo">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="../img/logo.png" alt="Ikizamini_logo">
+                    </a>
+                </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">AHABANZA <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kwiyandikisha.html">KWIYANDIKISHA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kurebamanota.html">KUREBA AMANOTA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ibigo.html">IBIGO BYIGISHA</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="gahunday'ikizamini.html">GAHUNDA Y'IBIZAMINI</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+
+      <!-- ikigo kimwe infomration -->
+      
+
+          <div class="container">
+            <div class="shadow-lg p-3 mb-5 bg-#ddd rounded school_content">
+              <p class="text-center">REMERA DRIVING SCHOOL</p>
+              <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="driving_icon">
+                          <div id="ibigo_imgs" class="shadow bg-white"> 
+                              <img class="card-img-top" id="School_Icon2" src="../img/ICONS2.png" alt="Card image cap">
+                          </div>
+                      </div>
+                      <div class="map">
+                          <div class="mapouter">
+                            <div class="gmap_canvas">
+                              <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=iprc&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                              </iframe>
+                              <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                            </div>
+          
+                          </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+                      <span id="star"><i class="fas fa-star"></i></span>
+                      <span id="star"><i class="fas fa-star"></i></span>
+                      <span id="star"><i class="fas fa-star"></i></span>
+                      <span id="star"><i class="fas fa-star"></i></span>
+                      <span id="star"><i class="fas fa-star"></i></span>
+                      <div class="revies_data">
+                          <span>30 Reviews</span>
+                          <br/>
+                          <span>2000 Students Currently Learning</span>
+                          <br/>
+                          <span>5 Driving School</span>
+                          <div class="social_EventsBtn">
+                              <button type="button" id="buttons" class="btn btn-primary shadow"><i class="fas fa-thumbs-up"></i>KUNDA</button>
+                              <button type="button" id="buttons" class="btn btn-primary shadow"><i class="fas fa-share-alt"></i>SANGIZA</button>
+
+                          </div>
+
+                      </div>
+                    </div>
+
+                    <!-- abayobozi -->
+                    <div class="col-md-4">
+                      <div class="card shadow" style="" id="admin_Inforamtion">
+                            <img class="card-img" src="../img/rigoeffector.png" alt="Card image cap" id="adminImg">
+                            <div class="card-body">
+                              <h5 class="card-title">LIMEMNYI Fidele</h5>
+                              <p class="card-text">UMUYOBOZI W'IKIGO</p>
+                              <p class="card-text">078455000</p>
+                              <p class="card-text">Remera-Kigali</p>        
+                          </div>
+                          <hr/>
+                          <img class="card-img" src="../img/rigoeffector.png" alt="Card image cap" id="adminImg">
+                            <div class="card-body">
+                              <h5 class="card-title">LIMEMNYI Fidele</h5>
+                              <p class="card-text">UMWALIMU W'ISHULI</p>
+                              <p class="card-text">078455000</p>
+                              <p class="card-text">Remera-Kigali</p>        
+                          </div>
+                      </div>                   
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+          <div class="container">
+            <div class="row">
+
+           
+              <div class=" col-md-6">
+              <div class="questionnaire">
+                      <form>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputEmail4">Izina</label>
+                              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="inputPassword4">Andi Mazina</label>
+                              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                            </div>
+                            
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Andika Ikibazo Cyawe</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="myTextarea">
+
+                              </textarea>
+                            </div>
+                          
+                          <button type="button" id="button" class="btn btn-primary">OHEREZA</button>
+                          
+                        </form>
+  
+                  </div>
+
+              </div>
+
+              <div class=" col-md-6">
+              <div class="questionnaire">
+                  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+  
+                  </div>
+
+              </div>
+            </div>
+
+          </div>
+          <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+          <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>   
+    
+</body>
+</html>

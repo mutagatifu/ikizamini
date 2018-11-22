@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <title>kwiyandikisha</title>
+</head>
+<body>
+     <!-- navbar header -->
+     <nav class="shadow-lg p-3 mb-5 bg-white rounded navbar sticky-top  navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                    <div class="navbar-header responsive-logo">
+                        <a href="index.html" class="navbar-brand">
+                            <img src="../img/logo.png" alt="Ikizamini_logo">
+                        </a>
+                    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">AHABANZA <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="kwiyandikisha.html">kWIYANDIKISHA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="kurebamanota.html">KUREBA AMANOTA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ibigo.html">IBIGO BYIGISHA</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="gahunday'ikizamini.html">GAHUNDA Y'IBIZAMINI</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </nav>
+
+   
+    <div class="content_wrapper_register">
+        <!-- thoser are making backgroudn great -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 ">
+                    <div class="content_register">
+                        <form action="" id="myformData" method="POST">
+                            <img class="king" id="img" src="../img/rigoeffector.png" height="150" alt="">
+                            <div class="row justify-content-center">
+                                <label id="mypic" class="shadow-lg p-3 mb-5 bg-white rounded"> Picture
+                                        <input type="file" name="imaged" id="File" accept="image/*" onchange="previewFile()" size="60" >
+                                        <p>Only Pictures</p>
+                                </label> 
+                            </div>
+
+                            <div class="types" >
+                                <input type="text" name="indangamuntu" class="shadow-lg p-3 mb-5 bg-white rounded form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nomero y'indangamuntu" >
+                              
+                                <p>Indangamuntu igomba kuba ari imibare Gusa kandi ari makumyabiri</p>
+                                
+                                <input type="text" name="izinaBwite" class="shadow-lg p-3 mb-5 bg-white rounded form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Izina Bwite">
+                                <input type="text" name="andimazina" class="shadow-lg p-3 mb-5 bg-white rounded form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Andi Mazina">
+                             
+                                       
+                                              <select class="shadow-lg p-3 mb-5 bg-white rounded round">
+                                                    <option>Ubwoko bw'ikizamini</option>
+                                                    <option>Uruhushya Rwa burundu</option>
+                                                    <option>Uruhushya Rw'Agateganyo</option>
+                                            </select>
+
+                                            <select class="round shadow-lg p-3 mb-5 bg-white rounded" id="round2">
+                                                    <option>Ururimi Rw'Ikizamini</option>
+                                                    <option>Ikinyarwanda</option>
+                                                    <option>French</option>
+                                                    <option>English</option>
+                                            </select>
+
+                                            <select class="round shadow-lg p-3 mb-5 bg-white rounded" id="round2">
+                                                    <option>Akarere</option>
+                                                    <option>Kigali City</option>
+                                                    <option>Nyarugenge</option>
+                                                    <option>Nyamagabe</option>
+                                            </select>
+                            
+                                            <select class="round shadow-lg p-3 mb-5 bg-white rounded" id="round2">
+                                                    <option>Aho Ikizamini Kizakorerwa</option>
+                                                    <option>Kigali city</option>
+                                                    <option>Nyarugenge</option>
+                                                    <option>Nyamagabe</option>
+                                                    <option>Kirehe</option>
+                                            </select>
+
+                                            <label for="ibisubizo" id="resulting_content">Kumenyesha Ibisubizo</label>
+                                            <br/>
+
+
+                                            <div class="row form-check messages">
+                                                <div class="sms">
+                                                        <label class="form-check-label " for="defaultCheck1">
+                                                                Ubutumwa Bugufi
+                                                        </label>
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">   
+                                                </div>
+                                                <div class="emails">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                                Imayeli
+                                                         </label>
+                                                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">                                               
+                                                 </div>  
+                                                 <!-- <div class="phone">
+                                                  <label class="form-check-label" for="defaultCheck1">
+                                                         Nomero ya Telefoni
+                                                   </label>
+                                                   <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">                                               
+                                                </div>  -->
+                                                </div>   
+                                                <div class="noticed">
+                                                    <p>Ikitonderwa</p>
+                                                    <div class="ribbon"></div>
+                                                </div>
+                                                <div class="noted_noted">
+                                                    <p>Numara Kwishyura urahita ubona ubutumwa bugufi kuri nomero yawe ya telefoni cg imayili yawe</p>
+
+                                                </div> 
+                                                    
+                                
+                            </div>
+                            <div class="">
+
+                            </div>
+                            <input type="submit" id="send" class="btn btn-primary" name="send">OHEREZA</button>
+                            <button type="button" id="button" class="btn btn-primary">BANZA UREBE</button>
+                            <button type="button" id="button" class="btn btn-primary">KURAHO</button>
+                       </form>
+                    </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="spacer">
+         
+    </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script>
+<script src="../js/ikizamini.js"></script>
+</body>
+</html>
