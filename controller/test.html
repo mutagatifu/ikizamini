@@ -1,29 +1,68 @@
-
-
 <html>
+     
 <head>
-<title></title>
+
+<title>sdfga</title>
+
 </head>
 <body>
-
-
+    <div id="demo">
+        <h1>Here I am</h1>
+        <button type="button" onclick="loadDoc()" id="butt">Change Content</button>
+        <p class="parag"></p>
+        </div>
+<script src="../IKIZAMINI.RW/js/jquery.js"></script>
 
 <script type="text/javascript">
-    var wrapper = document.getElementById('myform');
-    var inputs = wrapper.querySelectorAll('input');
-    var number1 = wrapper.getElementById('num1');
-    var number2 = wrapper.getElementById('num2');
-
-    const calc =( number1,number2) =>{
-        return number1 + number2;
-
+function loadDoc() {
+  var xhttp;
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
     }
+  };
+  xhttp.open("GET", "rugamba.txt", true);
+  xhttp.send();
+}
 
- console.log(calc());
 
 
+</script>
+<!-- <script type="text/javascript">
+$("document").ready(function(){
+$.ajax({  
+    url: "",
+    method:"",
+    dataType:"",
+    success:function(){
+    }
+});
+});
+$("#butt").click(function(){
 
+    function clickThen(){
+var msg = "I will be genius then";
+$(".parag").append("<p>"+msg+"</p>");
+//alert(msg);
+}
+clickThen();
+});
 
+$("#butt").hover(function(){
+alert("hello mavin");
+
+},
+function(){
+    null;
+}
+); -->
 </script>
 </body>
 

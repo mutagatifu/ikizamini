@@ -1,0 +1,7 @@
+SELECT * , locations.sector
+FROM shop_branches, locations
+WHERE shop_branches.location_id = locations.location_id
+AND shop_branches.shop_id = ( 
+SELECT shop_id
+FROM shops
+WHERE shop_name =  'One love' ) 

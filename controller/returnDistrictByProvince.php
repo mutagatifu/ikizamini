@@ -23,6 +23,6 @@ $utureres = array();
 foreach ($query as $row){
     $utureres[]=$row;
 }
-$returnJS = array('status'=>$status,'message'=>$message,'data'=>$utureres);
-echo json_encode($returnJS);
+//$returnJS = array('status'=>$status,'message'=>$message,'data'=>$utureres);
+echo json_encode($utureres);
 ?>

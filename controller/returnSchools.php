@@ -5,7 +5,6 @@
  * Date: 22/11/2018
  * Time: 11:00
  */
-
 include '../include/school.php';
 $skul = new School();
 

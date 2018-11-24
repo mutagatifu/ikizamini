@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,11 +73,13 @@
                             
                                     <div class="card-body">
                                      <h5 class="card-title">KWIYANDIKISHA</h5>
-                                      <ul id="uturere">
-                                          <li><button>1</button>15/12/2018 - 20/12/2018</li>
+                                      <ul id="uturere" class="gahunda">
+
+                                            <!-- <li><button></button></li> -->
+                                          <!-- <li><button>1</button>15/12/2018 - 20/12/2018</li>
                                           <li><button>2</button>12/03/2019 - 20/03/2019</li>
                                           <li><button>3</button>15/06/2019 - 20/06/2019</li>
-                                          <li><button>4</button>15/10/2018 - 20/10/2019</li>
+                                          <li><button>4</button>15/10/2018 - 20/10/2019</li> -->
                                           
                                       </ul>
                                     </div>
@@ -91,7 +93,10 @@
                 <div class="col-sm-12 col-md-8">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 col-sm-12">
+
+                            <div class="col-sm col-md utuntu"><span></span></div>
+                            
+                            <!-- <div class="col-md-4 col-sm-12">
                                     <div class="card shadow" id="mycard" style="width: 100%;">
                             
                                             <div class="card-body">
@@ -144,8 +149,7 @@
                                                             <button>4</button>
                                                         <p>Lorem ipsum dolor sit amet.</p>
                                                     </div>
-                                                
-                                                
+                    
                                              
                                             </div>
                                     </div>
@@ -174,20 +178,9 @@
                                                             <button>4</button>
                                                         <p>Lorem ipsum dolor sit amet.</p>
                                                     </div>
-                                                
-                                                
-                                             
                                             </div>
                                     </div>
-
-                            </div>
-
-
-                            
-
-
-                            
-
+                            </div>-->
                         </div> 
                         <!-- end of row class -->
                     </div>
@@ -200,58 +193,59 @@
          <!-- end of col-md 12 class -->
          <script src="../js/jquery.js"></script>
     <script type="text/javascript">
-
-$(document).ready(function(){
-  $.ajax({ 
-    url: "http://localhost/ikizamini/controller/fetchIntara.php",
-    method: "GET",
+        $(document).ready(function(){
+$.ajax({
+    url:"http://localhost/ikizamini/controller/fetchIntara.php",
+    method:"get",
     dataType:"json",
-    success: function(data) {
-        console.log(data);
-       for(var i in data) {  
-           $("#prov").append()
-           $("#prov").hide();     
-            $("#uturere").append('<li id='+data[i].id+'>'+data[i].name+data[i].id+'</li>');
-            alert(data[i].id); 
-         }
-   }
+    cache:false,
+    success:function(listIntara){
+        //console.log(listIntara);
+        for( var i in listIntara){
+            //alert(listIntara[i].name);
+           
+      $("#uturere").append('<li data-intaraid='+listIntara[i].id+' class="Index">'+listIntara[i].name+' </li>');   
+        }
+        $('.Index').hover(function(){
 
-  });
+        var ids = $(this).data('intaraid');
+
+            $.ajax({
+                url : "http://localhost/ikizamini/controller/returnDistrictByProvince.php",
+                method: "post",
+                data:"intara="+ids,
+                dataType : "json",
+                cache: false,
+                success:function(data){
+                 
+                    for(var t in data){
+                        
+                        $(".utuntu").append("<span>"+data[t].district+"</span>");
+                    }
+                }
+            });        
+        },function(){
+            $(".utuntu").empty();
+        });
+        }
 });
-
-
-$('.intara').hover(function(){
-
-
-  //alert("i am here");  
-  //var intara_id=$(this).attr('id');
-  //alert(intara_id);
-
-
-//     $.ajax({ 
-//     url: "http://localhost/ikizamini/controller/fetchIntara.php",
-//     method: "GET",
-//     dataType:"json",
-//     success: function(data) {
-//         console.log(data);
-
-//        for(var i in data) {  
-        
-//         //alert(data[i].id);
-//          }
-//          alert(data);
-//    }
-
-//   });
-
-},
-function(){
-   null;
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$.ajax({
+url : "http://localhost/ikizamini/controller/returnExamTerms.php",
+method : "get",
+dataType :"json",
+success : function(data){  
+    console.log(data);
+    for(var d in data){
+        $(".gahunda").append("<li><button>" +data[d].id+"</button>"+ data[d].from+" / "+data[d].to+ "</li>");
+    }
 }
 
-);
-
-
+});
+});
     </script>
 </body>
 </html>

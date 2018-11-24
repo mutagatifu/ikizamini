@@ -65,5 +65,14 @@ class services extends DbConnection{
         $query = $this->connection->query("insert into services(name,price,schoolId) values ('$this->serviceName','$this->price','$this->school')");
         return $query;
     }
+    public function updateService($serviceId,$updateTime){
+        $query = $this->connection->query("update services set name='$this->serviceName',price='$this->price',updated_time='$updateTime' where id='$serviceId'");
+        return $query;
+
+    }
+    public function deleteService($serviceId){
+        $query = $this->connection->query("delete from services where id='$serviceId'");
+        return $query;
+    }
 }
 ?>
